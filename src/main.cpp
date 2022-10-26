@@ -88,7 +88,7 @@ private:
   }
 
   // Serial output of iBeacon information
-  void printIBeacon(BLEAdvertisedDevice device)
+  void printIBeacon(BLEAdvertisedDevice device)//87b99b2c-90fd-11e9-bc42
   {
     if (! (getUuid(device).equals("2686F39C-BADA-4658-854A-A62E7E5E8B8") || getUuid(device).equals("2686F39C-BADA-4658-854A-A62E7E5E8B8D"))){
       Serial.printf("addr:%s rssi:%d uuid:%s power:%d\r\n",
@@ -208,7 +208,7 @@ void setup()
 
   Serial.printf("enter deep sleep\n");
 
-  esp_deep_sleep(1000000LL * GPIO_DEEP_SLEEP_DURATION);
+  esp_deep_(1000000LL * GPIO_DEEP_SLEEP_DURATION);
 
   Serial.printf("in deep sleep\n");
 }
